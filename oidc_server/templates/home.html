@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n staticfiles %}
+
+{% block content %}
+
+<section>
+    <div class="container">
+        <h1 class="jumbotron-heading">{% trans 'Welcome' %}{% if user.is_authenticated %} {{ user.username }}{% endif %}!</h1>
+        <p class="lead text-muted">{% trans 'This is an OpenID Connect 1.0 Provider. %}</p>
+        <p><a href="{% url 'admin:index' %}oidc_provider/client/" class="btn btn-primary btn-lg">{% trans 'Create your clients' %}</a></p>
+    </div>
+</section>
+
+{% endblock %}
