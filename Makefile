@@ -19,5 +19,5 @@ isort:
 build_docker_image:
 	docker build -t oidc-server .
 
-create_docker_container:
-	docker run -d -p 8000:8000 --name oidc-server oidc-server
+run_docker_container:
+	docker run -d -p 8000:8000 --rm --name oidc-server oidc-server

@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "e46i&!jtggfvuvjojyl@ns@s&m5r_!hw$gnwrp2yh0%q3zezx-"
+SECRET_KEY = os.environ.get("SECRET_KEY", default="e46i&!jtggfvuvjojyl@ns@s&m5r_!hw$gnwrp2yh0%q3zezx-")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = int(os.environ.get("DEBUG", default=0))
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -105,9 +105,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = os.environ.get("LANGUAGE_CODE", default="en-us")
 
-TIME_ZONE = "UTC"
+TIME_ZONE = os.environ.get("TIME_ZONE", default="UTC")
 
 USE_I18N = True
 
@@ -121,5 +121,6 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
-USE_X_FORWARDED_HOST = True
-FORCE_SCRIPT_NAME = "/uc"
+FORCE_SCRIPT_NAME = os.environ.get("FORCE_SCRIPT_NAME", default="")  # /uc
+if FORCE_SCRIPT_NAME:
+    USE_X_FORWARDED_HOST = True
