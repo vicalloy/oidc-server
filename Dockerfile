@@ -2,6 +2,7 @@ FROM python:3.8
 
 RUN apt-get update && apt-get install -y \
 		pkg-config \
+		gunicorn \
 		--no-install-recommends
 
 RUN pip install --upgrade pip setuptools pipenv
