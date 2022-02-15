@@ -105,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = os.environ.get("LANGUAGE_CODE", default="en-us")
+LANGUAGE_CODE = os.environ.get("LANGUAGE_CODE", default="en-us").replace("_", "-")
 
 TIME_ZONE = os.environ.get("TIME_ZONE", default="UTC")
 
