@@ -17,7 +17,7 @@ isort:
 	isort ./
 
 build_docker_image:
-	docker build -t oidc-server .
+	docker build -t vicalloy/oidc-server .
 
 run_docker_container:
-	docker run -d -p 8000:8000 --rm --name oidc-server oidc-server
+	docker run -d -p 8000:8000 --rm --name oidc-server vicalloy/oidc-server
