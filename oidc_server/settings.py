@@ -124,3 +124,4 @@ if FORCE_SCRIPT_NAME:
     USE_X_FORWARDED_HOST = True
 
 STATIC_URL = FORCE_SCRIPT_NAME + "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "static_root")
