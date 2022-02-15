@@ -24,3 +24,6 @@ build_docker_image:
 
 run_docker_container:
 	docker run -d -p 8000:8000 --rm --name oidc-server vicalloy/oidc-server
+
+docker-pull:
+	docker pull vicalloy/oidc-server
