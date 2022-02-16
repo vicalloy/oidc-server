@@ -115,6 +115,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+OIDC_USERINFO = 'oidc_server.oidc_provider_settings.userinfo'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
