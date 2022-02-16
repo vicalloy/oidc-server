@@ -2,6 +2,8 @@
 
 A self-hosted OIDC server.
 
+oidc-server heavily borrows from `django-oidc-provider/example`.😁
+
 ## run via docker-compose
 
 1. start oidc server and config it.
