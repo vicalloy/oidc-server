@@ -1,0 +1,16 @@
+version: "3"
+services:
+  oidc-server:
+    image: vicalloy/oidc-server
+    volumes:
+      - ./data/db:/app/db:z
+      - ./data/static_root:/app/static_root:z
+    restart: always
+  nginx:
+    image: nginx
+    ports:
+      - 8888:80
+    volumes:
+      - ./nginx/:/etc/nginx/conf.d/:ro
+      - ./data/static_root:/static_root:ro
+    restart: always

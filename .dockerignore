@@ -2,3 +2,4 @@
 .github
 static_root
 db/db.sqlite3
+docker-demo/
