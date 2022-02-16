@@ -24,8 +24,7 @@ oidc-server heavily borrows from `django-oidc-provider/example`.😁
 
 ## screenshots
 
+1. Add OIDC Client
 ![](screenshot/client.png)
-Add OIDC Client
-
+1. Add new user
 ![](screenshot/user.png)
-Add new user
