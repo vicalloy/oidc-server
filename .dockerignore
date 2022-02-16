@@ -1,5 +1,6 @@
 .git
 .github
 static_root
+docker-demo
+screenshot
 db/db.sqlite3
-docker-demo/
