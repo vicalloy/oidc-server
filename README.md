@@ -20,3 +20,4 @@ oidc-server heavily borrows from `django-oidc-provider/example`.😁
     OIDC_TOKEN_URI=http://localhost:8888/oauth/token/
     OIDC_USERINFO_URI=http://localhost:8888/oauth/userinfo/
     ```
+1. Open `http://127.0.0.1:8888/admin/auth/user/` to add user.
