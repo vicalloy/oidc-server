@@ -20,7 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY", default="e46i&!jtggfvuvjojyl@ns@s&m5r_!hw$gnwrp2yh0%q3zezx-")
+SECRET_KEY = os.environ.get(
+    "SECRET_KEY", default="e46i&!jtggfvuvjojyl@ns@s&m5r_!hw$gnwrp2yh0%q3zezx-"
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = int(os.environ.get("DEBUG", default=1))
@@ -105,7 +107,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = os.environ.get("LANGUAGE_CODE", default="en-us").replace("_", "-")
+LANGUAGE_CODE = os.environ.get("LANGUAGE_CODE", default="en-us").replace(
+    "_", "-"
+)
 
 TIME_ZONE = os.environ.get("TIME_ZONE", default="UTC")
 
@@ -115,7 +119,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-OIDC_USERINFO = 'oidc_server.oidc_provider_settings.userinfo'
+OIDC_USERINFO = "oidc_server.oidc_provider_settings.userinfo"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
@@ -126,4 +130,4 @@ if FORCE_SCRIPT_NAME:
 
 STATIC_URL = FORCE_SCRIPT_NAME + "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static_root")
-LOGIN_URL = FORCE_SCRIPT_NAME + '/accounts/login/'
+LOGIN_URL = FORCE_SCRIPT_NAME + "/accounts/login/"
