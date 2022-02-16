@@ -1,0 +1,4 @@
+.git
+.github
+static_root
+db/db.sqlite3
