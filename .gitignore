@@ -1,3 +1,4 @@
 db/db.sqlite3
 static_root
 docker-demo/data/
+.idea

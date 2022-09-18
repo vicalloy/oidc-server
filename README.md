@@ -26,5 +26,7 @@ oidc-server heavily borrows from `django-oidc-provider/example`.😁
 
 1. Add OIDC Client
 ![](screenshot/client.png)
-1. Add new user
+2. Register new user in client side
+![](screenshot/client-register.png)
+3. Or add new user in Admin
 ![](screenshot/user.png)

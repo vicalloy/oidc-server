@@ -28,6 +28,7 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}"><i class="fa fa-times" aria-hidden="true"></i> {% trans 'Logout' %}</a></li>
                     {% else %}
                     <li class="nav-item"><a class="nav-link" href="{% url 'login' %}"><i class="fa fa-sign-in" aria-hidden="true"></i> {% trans 'Login' %}</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'register' %}"><i class="fa fa-user-plus" aria-hidden="true"></i> {% trans 'Register' %}</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://github.com/vicalloy/oidc-server" target="_blank"><i class="fa fa-github-alt"></i> {% trans 'View on Github' %}</a></li>
                     {% endif %}
                 </ul>
